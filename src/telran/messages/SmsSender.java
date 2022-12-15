@@ -11,9 +11,11 @@ public class SmsSender implements Sender {
 		System.out.printf("text '%s' has been sent to %s\n", text, phoneNumber);
 
 	}
+
 	static boolean phoneNumberPredicate(String phone) {
 		return phone.matches(phoneNumberRegEx());
 	}
+
 	private static String phoneNumberRegEx() {
 		return "(\\+972\\s*-?|0)(5\\d|7[2-7])(-?\\d){7}";
 	}
